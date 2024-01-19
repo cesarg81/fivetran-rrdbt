@@ -11,10 +11,10 @@
 
 with source_data as (
     select 
-        to_json(rrdata.trucktrips.*) as jsonData,
+        to_json({{ source('RRGSheet', 'trucktrips.*') }}) as jsonData,
         CURRENT_TIMESTAMP as last_updated,
         0 as processed
-    from rrdata.trucktrips;
+    from {{ source('RRGSheet', 'trucktrips') }}
 )
 
 select *
