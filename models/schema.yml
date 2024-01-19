@@ -1,6 +1,14 @@
 
 version: 2
 
+sources:
+  - name: RRGSheet
+    database: defaultdb  
+    schema: rrdata  
+
 models:
-  - name: generic_model
+  - name: combined_data
+    description: "A starter dbt model"
+
+  - name: truck_trips
     description: "A starter dbt model"
