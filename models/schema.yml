@@ -1,0 +1,6 @@
+
+version: 2
+
+models:
+  - name: generic_model
+    description: "A starter dbt model"
