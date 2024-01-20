@@ -1,11 +1,6 @@
 
 version: 2
 
-sources:
-  - name: RRGSheet
-    database: defaultdb  
-    schema: rrdata  
-
 models:
   - name: combined_data
     description: "A starter dbt model"
