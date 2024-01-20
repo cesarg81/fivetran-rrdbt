@@ -13,7 +13,8 @@ with source_data as (
             to_json({{ source('postgres', table[0]) }}.*) as jsonData,
             CURRENT_TIMESTAMP as last_updated,
             0 as processed
-        FROM {{ source('postgres', table[0]) }}
+        FROM {{ source('postgres', table[0]) }} 
+        WHERE "_fivetran_synced" >= CURRENT_TIMESTAMP - INTERVAL '1 hour'
         {% if not loop.last %}
             UNION ALL
         {% endif %}
