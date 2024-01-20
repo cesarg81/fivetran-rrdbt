@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: postgres
+    database: defaultdb
+    schema: rrdata
+    tables:
+      - name: trucktrips
+        description: "Description of table1"
+        
+      - name: truck_trips_2_sheet_1
+        description: "Description of table1"
+        
+      - name: truck_trips_2_trips
+        description: "Description of table1"

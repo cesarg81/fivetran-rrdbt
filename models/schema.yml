@@ -1,9 +1,0 @@
-
-version: 2
-
-models:
-  - name: combined_data
-    description: "A starter dbt model"
-
-  - name: truck_trips
-    description: "A starter dbt model"
