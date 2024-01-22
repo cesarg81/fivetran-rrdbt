@@ -14,7 +14,7 @@ with source_data as (
             CURRENT_TIMESTAMP as last_updated,
             0 as processed
         FROM {{ source('postgres', table[0]) }} 
-        WHERE "_fivetran_synced" >= CURRENT_TIMESTAMP - INTERVAL '1 hour'
+        WHERE "_fivetran_synced" >= CURRENT_TIMESTAMP - INTERVAL '15 minutes' /* INTERVAL '1 hour'*/
         {% if not loop.last %}
             UNION ALL
         {% endif %}
